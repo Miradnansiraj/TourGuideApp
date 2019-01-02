@@ -5,7 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.android.tourguideapp.MallsFragment;
+import com.example.android.tourguideapp.fragment.ActivityFragment;
+import com.example.android.tourguideapp.fragment.FoodFragment;
+import com.example.android.tourguideapp.fragment.MallsFragment;
+import com.example.android.tourguideapp.fragment.ParksFragment;
 
 public class FPAdapter extends FragmentPagerAdapter
 {
@@ -18,10 +21,10 @@ public class FPAdapter extends FragmentPagerAdapter
     public Fragment getItem(int i) {
         switch(i)
         {
-            case 1: return new MallsFragment();
-            case 2: return new MallsFragment();
-            case 3: return new MallsFragment();
-            default: return new MallsFragment();
+            case 0: return new MallsFragment();
+            case 1: return new ParksFragment();
+            case 2: return new FoodFragment();
+            default: return new ActivityFragment();
         }
     }
 

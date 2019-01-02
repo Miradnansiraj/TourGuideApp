@@ -48,7 +48,10 @@ public class CardAdapter extends ArrayAdapter<Card>
         Card currentCard = getItem(position);
 
         holder.imageButton.setImageResource(R.drawable.twotone_location_on_24);
-        holder.imageView.setImageResource(R.drawable.baseline_photo_24);
+        if(currentCard.hasImage())
+            holder.imageView.setImageResource(currentCard.getImageResID());
+        else
+            holder.imageView.setImageResource(R.drawable.baseline_photo_24);
 
         holder.title.setText(currentCard.getTitle());
         holder.subtitle.setText(currentCard.getSubtitle());
