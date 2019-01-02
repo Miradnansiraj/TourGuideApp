@@ -1,13 +1,15 @@
-package com.example.android.tourguideapp;
+package com.example.android.tourguideapp.adapter;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.android.tourguideapp.MallsFragment;
+
 public class FPAdapter extends FragmentPagerAdapter
 {
-    private final String[] tabTitles = new String[]{"Malls", "Parks", "Restaurants", "Tourist Spot"};
+    private final String[] tabTitles = new String[]{"Malls", "Parks", "Food", "Activity"};
     public FPAdapter(FragmentManager fm) {
         super(fm);
     }
