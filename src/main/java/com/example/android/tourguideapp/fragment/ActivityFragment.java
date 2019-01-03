@@ -35,6 +35,10 @@ public class ActivityFragment extends Fragment
         //25.4099934 , 55.4372015
         cards.add(new Card("Aqua Park Ajman", "Ajman Beach", "Closes at 8pm",
                 "2.6",R.drawable.aquapark, Uri.parse("geo:0,0?q=Aqua+Bounce+Ajman")));
+        cards.add(new Card("HOLIDAY BEACH CLUB", "Ajman Beach", "Closes at 2am",
+                "3.7",R.drawable.hbclub, Uri.parse("geo:0,0?q=HOLIDAY+BEACH+CLUB,+Ajman")));
+        cards.add(new Card("Body and Soul Spa", "villa 8 16th street Rumeilah 2", "Closes at 12am",
+                "3.7",R.drawable.bodysoul, Uri.parse("geo:0,0?q=Body+and+Soul+Elite+Health+Club+and+SPA")));
         cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);
