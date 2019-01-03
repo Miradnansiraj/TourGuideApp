@@ -36,18 +36,14 @@ public class MallsFragment extends Fragment
         //place: geo:latitude,longitude?q=query
         //      or geo:0,0?q=latitude,longitude(label)
         //          or geo:0,0?q=label
-        cards.add(new Card("Ajman City Centre", "Al Jurf - Al Ittihad St", "Closes 11:30 AM",
-                "4.2/5",R.drawable.ccajman, Uri.parse("geo:0,0?q=City+Centre+Ajman")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                                            "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
+        cards.add(new Card("Ajman City Centre", "Al Jurf - Al Ittihad St", "Closes 11:30am",
+                "4.2",R.drawable.ccajman, Uri.parse("geo:0,0?q=City+Centre+Ajman")));
+        cards.add(new Card("LuLu Hypermarket", "Al Karama", "Closes at 12am",
+                                            "4",R.drawable.luluajman, Uri.parse("geo:0,0?q=LuLu+Hypermarket,+Ajman")));
+        cards.add(new Card("Nesto Hypermarket", "Ittehad street", "Closes at 12am",
+                "4.1",R.drawable.nestoajman, Uri.parse("geo:0,0?q=Nesto+Hypermarket,+Mushrif")));
+        cards.add(new Card("Safeer Mall", "Al Nuaimia", "Closes 12am",
+                "3.9",R.drawable.safeerajman, Uri.parse("geo:0,0?q=Safeer+Mall+Ajman")));
         cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);

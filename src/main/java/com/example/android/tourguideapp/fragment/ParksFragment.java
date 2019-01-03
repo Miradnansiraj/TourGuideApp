@@ -33,16 +33,12 @@ public class ParksFragment extends Fragment
 
         cards = new ArrayList<>();
         //25.4099934 , 55.4372015
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
+        cards.add(new Card("Ladies Park", "Al Rashidiya", "Closes at 12am",
+                "3.7",R.drawable.ladiespark, Uri.parse("geo:0,0?q=Rashidiya+Park+for+families+and+children")));
+        cards.add(new Card("Family Park", "Al Jurf", "Closes at 8pm",
+                "3.8",R.drawable.jurfparkajman, Uri.parse("geo:0,0?q=Al+Jurf+Family+Park")));
+        cards.add(new Card("Helio Park", "Helio", "Closes at 8pm",
+                "3.8",R.drawable.heliopark, Uri.parse("geo:0,0?q=Helio+Park")));
         cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);

@@ -33,16 +33,18 @@ public class FoodFragment extends Fragment
 
         cards = new ArrayList<>();
         //25.4099934 , 55.4372015
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
+        cards.add(new Card("KFC", "Ajman Beach", "Closes at 2am",
+                "3.8",R.drawable.kfc, Uri.parse("geo:0,0?q=KFC+Ajman+Corniche")));
+        cards.add(new Card("Pizza Hut", "Ajman Beach", "Closes at 2am",
+                "3.9",R.drawable.pizzahut, Uri.parse("geo:0,0?q=Pizza+Hut+Ajman+Corniche")));
+        cards.add(new Card("Hardee\'s", "Ajman Beach", "Closes at 2am",
+                "3.8",R.drawable.hardees, Uri.parse("geo:0,0?q=Hardee's")));
+        cards.add(new Card("KFC", "Ajman Beach", "Closes at 2am",
+                "3.8",R.drawable.kfc, Uri.parse("geo:0,0?q=KFC+Ajman+Corniche")));
+        cards.add(new Card("KFC", "Ajman Beach", "Closes at 2am",
+                "3.8",R.drawable.kfc, Uri.parse("geo:0,0?q=KFC+Ajman+Corniche")));
+        cards.add(new Card("KFC", "Ajman Beach", "Closes at 2am",
+                "3.8",R.drawable.kfc, Uri.parse("geo:0,0?q=KFC+Ajman+Corniche")));
         cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);

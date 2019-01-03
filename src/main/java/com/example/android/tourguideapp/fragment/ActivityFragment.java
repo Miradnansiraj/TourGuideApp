@@ -33,16 +33,8 @@ public class ActivityFragment extends Fragment
 
         cards = new ArrayList<>();
         //25.4099934 , 55.4372015
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
-        cards.add(new Card("Mir\'s House", "Al Karama", "Open 24 hours",
-                "5/5", Uri.parse("geo:25.4099934,55.4372015")));
+        cards.add(new Card("Aqua Park Ajman", "Ajman Beach", "Closes at 8pm",
+                "2.6",R.drawable.aquapark, Uri.parse("geo:0,0?q=Aqua+Bounce+Ajman")));
         cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);
