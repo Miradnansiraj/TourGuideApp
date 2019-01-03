@@ -9,8 +9,6 @@ import com.example.android.tourguideapp.adapter.FPAdapter;
 
 public class MainActivity extends AppCompatActivity
 {
-    //TODO information about an event, restaurant, historical site, or similar.
-    //TODO At least one list includes pictures of the location.
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
