@@ -1,3 +1,84 @@
 <resources>
     <string name="app_name">AjmanTourGuide</string>
+    <string name="acc">Ajman City Centre</string>
+    <string name="acc_location">Al Jurf - Al Ittihad St</string>
+    <string name="acc_timing">Closes 11:30am</string>
+    <string name="acc_rating">4.2</string>
+    <string name="acc_map_location">geo:0,0?q=City+Centre+Ajman</string>
+    <string name="lulu">LuLu Hypermarket</string>
+    <string name="lulu_location">Al Karama</string>
+    <string name="lulu_timing">Closes at 12am</string>
+    <string name="lulu_rating">4</string>
+    <string name="lulu_map_location">geo:0,0?q=LuLu+Hypermarket,+Ajman</string>
+    <string name="nesto">Nesto Hypermarket</string>
+    <string name="nesto_location">Ittehad street</string>
+    <string name="nesto_timing">Closes at 12am</string>
+    <string name="nesto_rating">4.1</string>
+    <string name="nesto_map_location">geo:0,0?q=Nesto+Hypermarket,+Mushrif</string>
+    <string name="safeer">Safeer Mall</string>
+    <string name="safeer_location">Al Nuaimia</string>
+    <string name="safeer_timing">Closes 12am</string>
+    <string name="safeer_rating">3.9</string>
+    <string name="safeer_map_location">geo:0,0?q=Safeer+Mall+Ajman</string>
+    <string name="ladiespark">Ladies Park</string>
+    <string name="ladiespark_location">Al Rashidiya</string>
+    <string name="ladiespard_timing">Closes at 12am</string>
+    <string name="ladiespark_map_location">geo:0,0?q=Rashidiya+Park+for+families+and+children</string>
+    <string name="ladiespark_rating">3.7</string>
+    <string name="apajman">Aqua Park Ajman</string>
+    <string name="apajman_location">Ajman Beach</string>
+    <string name="apajman_timing">Closes at 8pm</string>
+    <string name="apajman_map_location">geo:0,0?q=Aqua+Bounce+Ajman</string>
+    <string name="apajman_rating">2.6</string>
+    <string name="hbc">HOLIDAY BEACH CLUB</string>
+    <string name="hbc_location">Ajman Beach</string>
+    <string name="hbc_timing">Closes at 2am</string>
+    <string name="hbc_map_location">geo:0,0?q=HOLIDAY+BEACH+CLUB,+Ajman</string>
+    <string name="hbc_rating">3.7</string>
+    <string name="bodysoul">Body and Soul Spa</string>
+    <string name="bodysoul_location">villa 8 16th street Rumeilah 2</string>
+    <string name="bodysoul_timing">Closes at 12am</string>
+    <string name="bodysoul_map_location">geo:0,0?q=Body+and+Soul+Elite+Health+Club+and+SPA</string>
+    <string name="bodysoul_rating">3.7</string>
+    <string name="map_intent">com.google.android.apps.maps</string>
+    <string name="kfc">KFC</string>
+    <string name="kfc_location">Ajman Beach</string>
+    <string name="kfc_timing">Closes at 2am</string>
+    <string name="kfc_map_location">geo:0,0?q=KFC+Ajman+Corniche</string>
+    <string name="kfc_rating">3.8</string>
+    <string name="pizza">Pizza Hut</string>
+    <string name="pizza_location">Ajman Beach</string>
+    <string name="pizza_timing">Closes at 2am</string>
+    <string name="pizza_map_location">geo:0,0?q=Pizza+Hut+Ajman+Corniche</string>
+    <string name="pizza_rating">3.9</string>
+    <string name="hardees">Hardee\'s</string>
+    <string name="hardees_location">Ajman Beach</string>
+    <string name="hardees_timing">Closes at 2am</string>
+    <string name="hardees_map_location">geo:0,0?q=Hardee\'s</string>
+    <string name="hardees_rating">3.8</string>
+    <string name="caribou">Caribou Coffee</string>
+    <string name="caribou_location">Ajman Beach</string>
+    <string name="caribou_timing">Closes at 2am</string>
+    <string name="caribou_map_location">geo:0,0?q=Caribou+Coffee,+Ajman</string>
+    <string name="caribou_rating">4.2</string>
+    <string name="kd">Karachi Darbar</string>
+    <string name="kd_location">Opp Sheikh Khalifa Bin Zayed St</string>
+    <string name="kd_timing">Closes at 2am</string>
+    <string name="kd_map_location">geo:0,0?q=Karachi+Darbar,+Ajman</string>
+    <string name="kd_rating">3.7</string>
+    <string name="mc">McDonald\'s</string>
+    <string name="mc_location">University St</string>
+    <string name="mc_timing">Closes at 2am</string>
+    <string name="mc_map_location">geo:0,0?q=McDonald\'s,+Ajman</string>
+    <string name="mc_rating">4.3</string>
+    <string name="fp">Family Park</string>
+    <string name="fp_location">Al Jurf</string>
+    <string name="fp_timing">Closes at 8pm</string>
+    <string name="fp_map_location">geo:0,0?q=Al+Jurf+Family+Park</string>
+    <string name="fp_rating">3.8</string>
+    <string name="helio">Helio Park</string>
+    <string name="helio_location">Helio</string>
+    <string name="helio_timing">Closes at 8pm</string>
+    <string name="helio_map_location">geo:0,0?q=Helio+Park</string>
+    <string name="helio_rating">3.8</string>
 </resources>

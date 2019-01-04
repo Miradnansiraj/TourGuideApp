@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.example.android.tourguideapp.Card;
 import com.example.android.tourguideapp.R;
 import com.example.android.tourguideapp.adapter.CardAdapter;
@@ -21,7 +20,6 @@ import java.util.ArrayList;
 public class FoodFragment extends Fragment
 {
     private ArrayList<Card> cards;
-    private CardAdapter cardAdapter;
     public FoodFragment() {}
 
     @Nullable
@@ -30,29 +28,31 @@ public class FoodFragment extends Fragment
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View viewGroup = inflater.inflate(R.layout.activity_list, container, false);
-
         cards = new ArrayList<>();
-        //25.4099934 , 55.4372015
-        cards.add(new Card("KFC", "Ajman Beach", "Closes at 2am",
-                "3.8",R.drawable.kfc, Uri.parse("geo:0,0?q=KFC+Ajman+Corniche")));
-        cards.add(new Card("Pizza Hut", "Ajman Beach", "Closes at 2am",
-                "3.9",R.drawable.pizzahut, Uri.parse("geo:0,0?q=Pizza+Hut+Ajman+Corniche")));
-        cards.add(new Card("Hardee\'s", "Ajman Beach", "Closes at 2am",
-                "3.8",R.drawable.hardees, Uri.parse("geo:0,0?q=Hardee's")));
-        cards.add(new Card("Caribou Coffee", "Ajman Beach", "Closes at 2am",
-                "4.2",R.drawable.caribou, Uri.parse("geo:0,0?q=Caribou+Coffee,+Ajman")));
-        cards.add(new Card("Karachi Darbar", "Opp Sheikh Khalifa Bin Zayed St", "Closes at 2am",
-                "3.7",R.drawable.karachi, Uri.parse("geo:0,0?q=Karachi+Darbar,+Ajman")));
-        cards.add(new Card("McDonald\'s", "University St", "Closes at 2am",
-                "4.3",R.drawable.mcdonald, Uri.parse("geo:0,0?q=McDonald's,+Ajman")));
-        cardAdapter = new CardAdapter(getActivity(), cards);
+        //map: geo:latitude,longitude?z=zoom
+        //place: geo:latitude,longitude?q=query
+        //      or geo:0,0?q=latitude,longitude(label)
+        //          or geo:0,0?q=label
+        cards.add(new Card(getString(R.string.kfc), getString(R.string.kfc_location), getString(R.string.kfc_timing),
+                getString(R.string.kfc_rating),R.drawable.kfc, Uri.parse(getString(R.string.kfc_map_location))));
+        cards.add(new Card(getString(R.string.pizza), getString(R.string.pizza_location), getString(R.string.pizza_timing),
+                getString(R.string.pizza_rating),R.drawable.pizzahut, Uri.parse(getString(R.string.pizza_map_location))));
+        cards.add(new Card(getString(R.string.hardees), getString(R.string.hardees_location), getString(R.string.hardees_timing),
+                getString(R.string.hardees_rating),R.drawable.hardees, Uri.parse(getString(R.string.hardees_map_location))));
+        cards.add(new Card(getString(R.string.caribou), getString(R.string.caribou_location), getString(R.string.caribou_timing),
+                getString(R.string.caribou_rating),R.drawable.caribou, Uri.parse(getString(R.string.caribou_map_location))));
+        cards.add(new Card(getString(R.string.kd), getString(R.string.kd_location), getString(R.string.kd_timing),
+                getString(R.string.kd_rating),R.drawable.karachi, Uri.parse(getString(R.string.kd_map_location))));
+        cards.add(new Card(getString(R.string.mc), getString(R.string.mc_location), getString(R.string.mc_timing),
+                getString(R.string.mc_rating),R.drawable.mcdonald, Uri.parse(getString(R.string.mc_map_location))));
+        CardAdapter cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, cards.get(i).getUri());
-                mapIntent.setPackage("com.google.android.apps.maps");
+                mapIntent.setPackage(getString(R.string.map_intent));
                 startActivity(mapIntent);
             }
         });

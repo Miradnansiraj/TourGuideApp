@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class ParksFragment extends Fragment
 {
     private ArrayList<Card> cards;
-    private CardAdapter cardAdapter;
     public ParksFragment() {}
 
     @Nullable
@@ -30,23 +29,25 @@ public class ParksFragment extends Fragment
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View viewGroup = inflater.inflate(R.layout.activity_list, container, false);
-
         cards = new ArrayList<>();
-        //25.4099934 , 55.4372015
-        cards.add(new Card("Ladies Park", "Al Rashidiya", "Closes at 12am",
-                "3.7",R.drawable.ladiespark, Uri.parse("geo:0,0?q=Rashidiya+Park+for+families+and+children")));
-        cards.add(new Card("Family Park", "Al Jurf", "Closes at 8pm",
-                "3.8",R.drawable.jurfparkajman, Uri.parse("geo:0,0?q=Al+Jurf+Family+Park")));
-        cards.add(new Card("Helio Park", "Helio", "Closes at 8pm",
-                "3.8",R.drawable.heliopark, Uri.parse("geo:0,0?q=Helio+Park")));
-        cardAdapter = new CardAdapter(getActivity(), cards);
+        //map: geo:latitude,longitude?z=zoom
+        //place: geo:latitude,longitude?q=query
+        //      or geo:0,0?q=latitude,longitude(label)
+        //          or geo:0,0?q=label
+        cards.add(new Card(getString(R.string.ladiespark), getString(R.string.ladiespark_location), getString(R.string.ladiespard_timing),
+                getString(R.string.ladiespark_rating),R.drawable.ladiespark, Uri.parse(getString(R.string.ladiespark_map_location))));
+        cards.add(new Card(getString(R.string.fp), getString(R.string.fp_location), getString(R.string.fp_timing),
+                getString(R.string.fp_rating),R.drawable.jurfparkajman, Uri.parse(getString(R.string.fp_map_location))));
+        cards.add(new Card(getString(R.string.helio), getString(R.string.helio_location), getString(R.string.helio_timing),
+                getString(R.string.helio_rating),R.drawable.heliopark, Uri.parse(getString(R.string.helio_map_location))));
+        CardAdapter cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, cards.get(i).getUri());
-                mapIntent.setPackage("com.google.android.apps.maps");
+                mapIntent.setPackage(getString(R.string.map_intent));
                 startActivity(mapIntent);
             }
         });

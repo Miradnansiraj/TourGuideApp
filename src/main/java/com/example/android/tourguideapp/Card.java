@@ -60,48 +60,24 @@ public class Card
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getSubtitle() {
         return subtitle;
-    }
-
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
     }
 
     public String getExtra1() {
         return extra1;
     }
 
-    public void setExtra1(String extra1) {
-        this.extra1 = extra1;
-    }
-
     public String getExtra2() {
         return extra2;
-    }
-
-    public void setExtra2(String extra2) {
-        this.extra2 = extra2;
     }
 
     public int getImageResID() {
         return imageResID;
     }
 
-    public void setImageResID(int imageResID) {
-        this.imageResID = imageResID;
-    }
-
     public Uri getUri() {
         return uri;
-    }
-
-    public void setUri(Uri uri) {
-        this.uri = uri;
     }
 
     //Code to check if card has image

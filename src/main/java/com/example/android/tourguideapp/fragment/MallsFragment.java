@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class MallsFragment extends Fragment
 {
     private ArrayList<Card> cards;
-    private CardAdapter cardAdapter;
     public MallsFragment() {}
 
     @Nullable
@@ -36,22 +35,22 @@ public class MallsFragment extends Fragment
         //place: geo:latitude,longitude?q=query
         //      or geo:0,0?q=latitude,longitude(label)
         //          or geo:0,0?q=label
-        cards.add(new Card("Ajman City Centre", "Al Jurf - Al Ittihad St", "Closes 11:30am",
-                "4.2",R.drawable.ccajman, Uri.parse("geo:0,0?q=City+Centre+Ajman")));
-        cards.add(new Card("LuLu Hypermarket", "Al Karama", "Closes at 12am",
-                                            "4",R.drawable.luluajman, Uri.parse("geo:0,0?q=LuLu+Hypermarket,+Ajman")));
-        cards.add(new Card("Nesto Hypermarket", "Ittehad street", "Closes at 12am",
-                "4.1",R.drawable.nestoajman, Uri.parse("geo:0,0?q=Nesto+Hypermarket,+Mushrif")));
-        cards.add(new Card("Safeer Mall", "Al Nuaimia", "Closes 12am",
-                "3.9",R.drawable.safeerajman, Uri.parse("geo:0,0?q=Safeer+Mall+Ajman")));
-        cardAdapter = new CardAdapter(getActivity(), cards);
+        cards.add(new Card(getString(R.string.acc), getString(R.string.acc_location), getString(R.string.acc_timing),
+                getString(R.string.acc_rating),R.drawable.ccajman, Uri.parse(getString(R.string.acc_map_location))));
+        cards.add(new Card(getString(R.string.lulu), getString(R.string.lulu_location), getString(R.string.lulu_timing),
+                                            getString(R.string.lulu_rating),R.drawable.luluajman, Uri.parse(getString(R.string.lulu_map_location))));
+        cards.add(new Card(getString(R.string.nesto), getString(R.string.nesto_location), getString(R.string.nesto_timing),
+                getString(R.string.nesto_rating),R.drawable.nestoajman, Uri.parse(getString(R.string.nesto_map_location))));
+        cards.add(new Card(getString(R.string.safeer), getString(R.string.safeer_location), getString(R.string.safeer_timing),
+                getString(R.string.safeer_rating),R.drawable.safeerajman, Uri.parse(getString(R.string.safeer_map_location))));
+        CardAdapter cardAdapter = new CardAdapter(getActivity(), cards);
         ListView listView = viewGroup.findViewById(R.id.list_view);
         listView.setAdapter(cardAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, cards.get(i).getUri());
-                mapIntent.setPackage("com.google.android.apps.maps");
+                mapIntent.setPackage(getString(R.string.map_intent));
                 startActivity(mapIntent);
             }
         });
